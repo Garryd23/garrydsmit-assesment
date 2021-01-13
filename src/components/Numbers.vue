@@ -36,12 +36,11 @@ export default {
         // 2. Set limit to the new currentLimit variable which is now a number and changed the loop to run until i=currentLimit so that the full range of numbers from 1 to the configured number are displayed. By converting currentLimit to a number it would also of allowed me to set i = currentLimit + 1 to achieve the same result. Previously this would have resulted in 1 being appended to the currentLimit and the output would not be what is required.
         numbers = [...numbers, i];
       }
-      console.log(numbers);
+
       return numbers.sort(() => Math.random() - 0.5);
     },
     hov(number) {
       const nums = document.querySelectorAll(".number");
-      console.log(number);
 
       for (let i = 0; i < nums.length; i++) {
         const num = nums[i].textContent.trim();
